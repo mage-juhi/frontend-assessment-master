@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> MindArc | Frontend Assessment - Ex:2</title>
+
+			<!-- Web Fonts -->
+			<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+			<link rel="stylesheet" href="web/css/bootstrap.css">
+			<link rel="stylesheet" href="web/css/custom.css">
+			<script src="web/js/jquery.min.js"></script>
+			<script src="web/js/jquery.responsiveTabs.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			<main class="page-main">
+				<div class="container-fluid p-0 top-banner">
+					<div class="question-wrapper centered">
+						<h2>Exercise 2</h2>
+						<span>Read the data.json file and display the data as tabs on desktop and an accordion on mobile.</span>
+					</div>
+				</div>
+				<div class="container">
+					<div id="defaultTabs">
+						<ul class="tabsList">
+						</ul>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#defaultTabs ").hide();
+				$.getJSON('data.json', function(obj) {
+					$.each(obj, function(key, val) {
+						var tabId = val.title;
+						tabId = tabId.replace(/ /g, "-");
+						$("#defaultTabs ul.tabsList").append('<li class="tab-item"><a href="#'+tabId+'">'+val.title+'</li>');
+						$("#defaultTabs ").append('<div id="'+tabId+'" class="tab-content">'+val.content+'</div>');
+					});
+				});
+
+				setTimeout(function(){
+					$("#defaultTabs ").show();
+					var $tabs = $('#defaultTabs');
+					$tabs.responsiveTabs({
+						startCollapsed: 'accordion',
+						active: 1
+					});
+					jQuery('.r-tabs-tab:first-child a').trigger('click');
+
+				}, 500);
+
+			});
+		</script>
+	</body>
+</html>
+

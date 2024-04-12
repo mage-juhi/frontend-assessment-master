@@ -1,0 +1,133 @@
+/*Custom Css*/
+
+body{
+	font-family: "Open Sans", Arial, sans-serif;
+}
+p{
+	  color: #333;
+}
+/*Headings h1 to h6*/
+h1 {
+	font-size: 28px;
+	line-height: 35px;
+}
+h2 {
+	font-size: 75px;
+}
+h3 {
+	font-size: 18px;
+	line-height: 27px;
+}
+h4 {
+	line-height: 25px;
+}
+h5 {
+	line-height: 20px;
+}
+h6 {
+	line-height: 18px;
+}
+a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+.top-banner {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.top-banner img{
+	width: 100%;
+	margin: 0 auto;
+	object-fit: cover;
+	filter: brightness(0.8);
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.banner-wrapper h2{
+	font-weight: bold;
+}
+.banner-wrapper span{
+	font-size: 35px;
+}
+.content.container{
+	margin: 40px auto;
+}
+.item{
+	-webkit-box-shadow: 0px 0px 2px 0px #bbb;
+	box-shadow: 0px 0px 2px 0px #bbb;
+	border-radius: 5px;
+	padding: 18px;
+	margin-bottom: 40px;
+}
+.item img {
+	width: 100%;
+	border-radius: 5px;
+}
+.item .item-content {
+	text-align: center;
+}
+.item .item-content span {
+	display: block;
+	text-align: center;
+	margin-top: 18px;
+	min-height: 145px;
+}
+.a-link{
+	display: block;
+	margin: 15px auto 0;
+	border-radius: 20px;
+	padding: 8px 15px;
+	background: #fff;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border: 3px solid #000;
+	font-size: 12px;
+	font-weight: bold;
+	max-width: 125px;
+	text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 640px){
+	.top-banner img {
+		min-height: 200px;
+	}
+	h2 {
+		font-size: 42px;
+	}
+	.banner-wrapper span {
+		font-size: 16px;
+	}
+	.item {
+		margin-bottom: 40px;
+	}
+	.items.row {
+		--bs-gutter-x: 0;
+		--bs-gutter-y: 0;
+	}
+}
+@media screen and (min-width: 641px) and (max-width: 768px){}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.top-banner img {
+		min-height: 200px;
+	}
+	.banner-wrapper span {
+		font-size: 22px;
+	}
+}
+@media screen and (max-width: 1025px) and (min-width: 1200px){}
+@media (min-width: 1200px) {
+	.col-custom-3{
+		width: 30.5%;
+		margin-right: 4%;
+		float: left;
+	}
+	.col-custom-3:last-child {
+		margin-right: 0;
+	}
+}

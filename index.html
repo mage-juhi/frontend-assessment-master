@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> MindArc | Frontend Assessment </title>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+		<link rel="stylesheet" href="web/css/bootstrap.css">
+		<link rel="stylesheet" href="web/css/custom.css">
+		<script src="web/js/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			<main class="page-main">
+				<div class="container-fluid p-0 top-banner">
+					<div class="question-wrapper centered">
+						<h2>MindArc Frontend Assessment</h2>
+						<span>Juhi Bhatt</span>
+					</div>
+				</div>
+				<div class="container">
+					<div class="exercise-actions col">
+						<a class="exercise" href="Exercise1">Exercise 1</a>
+						<a class="exercise" href="Exercise2">Exercise 2</a>
+						<a class="bonus-answer" href="#">
+							<span class="title-word title-word-1">Bonus</span>
+							<span class="title-word title-word-2">Answer</span>
+							<span class="title-word title-word-3">!!</span>
+						</a>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$( ".bonus-answer" ).click(function() {
+					alert("('b' + 'a' + + 'a' + 'a').toLowerCase() = banana BECAUSE '+ +' will return 'NaN'");
+				});
+			});
+
+		</script>
+	</body>
+</html>
+

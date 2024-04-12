@@ -1,0 +1,99 @@
+/*Custom Css*/
+
+body{
+	font-family: "Open Sans", Arial, sans-serif;
+}
+p{
+	  color: #333;
+}
+/*Headings h1 to h6*/
+h1 {
+	font-size: 28px;
+	line-height: 35px;
+}
+h2 {
+	font-size: 75px;
+}
+h3 {
+	font-size: 18px;
+	line-height: 27px;
+}
+h4 {
+	line-height: 25px;
+}
+h5 {
+	line-height: 20px;
+}
+h6 {
+	line-height: 18px;
+}
+.top-banner {
+	background: #222;
+}
+.question-wrapper h2{
+	font-weight: bold;
+}
+.question-wrapper {
+	text-align: center;
+	padding: 50px 0;
+	margin-bottom: 30px;
+	color: #fff;
+}
+a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 640px){
+	h2 {
+		font-size: 35px;
+	}
+}
+.exercise-actions{
+	text-align: center;
+}
+.exercise-actions a {
+	display: inline-block;
+	width: auto;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: #000;
+	text-decoration: none;
+}
+.title-word {
+	animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+	--color-1: #DF8453;
+	--color-2: #3D8DAE;
+	--color-3: #E4A9A8;
+}
+
+.title-word-2 {
+	--color-1: #DBAD4A;
+	--color-2: #ACCFCB;
+	--color-3: #17494D;
+}
+
+.title-word-3 {
+	--color-1: #ACCFCB;
+	--color-2: #E4A9A8;
+	--color-3: #ACCFCB;
+}
+@keyframes color-animation {
+	0%    {color: var(--color-1)}
+	32%   {color: var(--color-1)}
+	33%   {color: var(--color-2)}
+	65%   {color: var(--color-2)}
+	66%   {color: var(--color-3)}
+	99%   {color: var(--color-3)}
+	100%  {color: var(--color-1)}
+}
+a.bonus-answer {
+	display: block;
+	max-width: 200px;
+	margin: 50px auto;
+}
+
